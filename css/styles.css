@@ -130,3 +130,25 @@ h1 {
     margin-top: 10px;
     padding-left: 20px;
 }
+
+.section {
+    background-color: transparent;
+    padding: 60px 30px;
+    color: #fff;
+}
+.section-content {
+    max-width: 900px;
+    margin: auto;
+}
+#education {
+    background-color: #072E3F;
+    color: #f8f9fa;
+}
+#education .section-content {
+    padding-top: 20px;
+}
+.edu-logo {
+    background: white;
+    border-radius: 8px;
+    padding: 5px;
+}
