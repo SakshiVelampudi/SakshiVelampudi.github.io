@@ -154,3 +154,33 @@ body, html {
   font-size: 0.9rem;
   color: #333;
 }
+
+.accordion-item {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  background: white;
+}
+.accordion-item input {
+  display: none;
+}
+.accordion-item label {
+  display: block;
+  padding: 15px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #e0e0e0;
+  color: #005f73;
+}
+.accordion-item .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: #fff;
+  padding: 0 20px;
+}
+.accordion-item input:checked ~ .accordion-content {
+  max-height: 1000px;
+  padding: 20px;
+}
