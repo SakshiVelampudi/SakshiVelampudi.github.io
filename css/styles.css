@@ -168,3 +168,12 @@ h1 {
     text-align: center;
     color: #005f73;
 }
+
+.section {
+    padding: 60px 30px;
+    margin-left: 180px;
+}
+#education {
+    background-color: #f1f1f1;
+    color: #212529;
+}
