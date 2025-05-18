@@ -125,3 +125,32 @@ body, html {
   margin-right: 10px;
   color: #0288d1;
 }
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+.cert-card {
+  background: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+.cert-card img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 10px;
+}
+.cert-card h4 {
+  font-size: 1rem;
+  color: #005f73;
+  margin: 10px 0 5px;
+}
+.cert-card p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #333;
+}
