@@ -184,3 +184,31 @@ body, html {
   max-height: 1000px;
   padding: 20px;
 }
+
+.ctf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+.ctf-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+.ctf-logo {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+}
+.ctf-cert-img {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 100%;
+}
+.ctf-cert-embed {
+  width: 100%;
+  height: 300px;
+  margin-top: 15px;
+}
