@@ -88,3 +88,16 @@ h1 {
     max-width: 900px;
     margin: auto;
 }
+
+.contact-icons {
+    margin-top: 15px;
+}
+.contact-icons a {
+    margin: 0 10px;
+    font-size: 1.4rem;
+    color: #a5f3fc;
+    text-decoration: none;
+}
+.contact-icons a:hover {
+    color: #00e5ff;
+}
