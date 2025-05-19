@@ -259,16 +259,18 @@
 
 
 
-<section class="section" id="ctf" style="background-color: #f9f9f9; padding: 50px 0;">
+<section class="section" id="ctf" style="background-color: #f1f1f1;">
   <div class="section-content">
-    <h2 style="text-align:center; font-size:2rem; margin-bottom:40px;">Capture The Flag (CTF) Participation</h2>
-    <div class="ctf-icon-grid">
-      <img src="assets/img/ctf_htb_logo.png" alt="HTB" onclick="showCTFLabel('htb')" class="ctf-icon">
-      <img src="assets/img/ctf_thm_logo.png" alt="THM" onclick="showCTFLabel('thm')" class="ctf-icon">
-      <img src="assets/img/ctf_meta_logo.png" alt="MetaCTF" onclick="showCTFLabel('meta')" class="ctf-icon">
+    <h2>Capture The Flag (CTF) Participation</h2>
+
+    <div class="ctf-icons">
+      <img src="assets/img/ctf_htb_logo.png" class="ctf-icon-card" onclick="toggleCTFInfo('htb-info')">
+      <img src="assets/img/ctf_thm_logo.png" class="ctf-icon-card" onclick="toggleCTFInfo('thm-info')">
+      <img src="assets/img/ctf_meta_logo.png" class="ctf-icon-card" onclick="toggleCTFInfo('meta-info')">
     </div>
 
-    <div id="htb" class="ctf-label">
+    <!-- HTB Info -->
+    <div class="ctf-info-card" id="htb-info" style="display: none;">
       <h3>Hack The Box (HTB)</h3>
       <p><strong>Profile:</strong> <a href="https://app.hackthebox.com/profile/2135920" target="_blank">View HTB Profile</a></p>
       <ul>
@@ -283,12 +285,13 @@
         <li>Challenges Solved: 10 / 20</li>
         <li>Skills: Privilege escalation, tunneling, Linux enumeration</li>
       </ul>
-      <p>📝 Writeups on <a href="https://medium.com/@cyberquestor/list/hacktheboxwalkthrough-290c44414be9" target="_blank">Medium</a></p>
+      <p>📝 <strong>Writeups:</strong> <a href="https://medium.com/@cyberquestor/list/hacktheboxwalkthrough-290c44414be9" target="_blank">Medium</a></p>
     </div>
 
-    <div id="thm" class="ctf-label">
+    <!-- THM Info -->
+    <div class="ctf-info-card" id="thm-info" style="display: none;">
       <h3>TryHackMe (THM)</h3>
-      <p><strong>Profile:</strong> <a href="https://tryhackme.com/p/SakshiVelampudi" target="_blank">View THM Profile</a></p>
+      <p><strong>Profile:</strong> <a href="https://tryhackme.com/p/SakshiVelampudi" target="_blank">View TryHackMe Profile</a></p>
       <ul>
         <li>Rank: 123216 (Top 8%)</li>
         <li>Completed Rooms: 44</li>
@@ -300,13 +303,14 @@
         <li>Challenges Solved: 17</li>
         <li>Notable Rooms: Blue, Overpass, Advent of Cyber</li>
       </ul>
-      <p>📝 Writeups on <a href="https://medium.com/@cyberquestor/list/tryhackmewalkthrough-618a05bd53fc" target="_blank">Medium</a></p>
+      <p>📝 <strong>Writeups:</strong> <a href="https://medium.com/@cyberquestor/list/tryhackmewalkthrough-618a05bd53fc" target="_blank">Medium</a></p>
     </div>
 
-    <div id="meta" class="ctf-label">
+    <!-- MetaCTF Info -->
+    <div class="ctf-info-card" id="meta-info" style="display: none;">
       <h3>MetaCTF</h3>
       <p><strong>Alias:</strong> anonymous12</p>
-      <table class="ctf-table">
+      <table>
         <thead>
           <tr><th>Month</th><th>Rank</th><th>Challenges Completed</th></tr>
         </thead>
@@ -317,10 +321,11 @@
           <tr><td>Dec 2024</td><td>526</td><td>1 / 10</td></tr>
         </tbody>
       </table>
-      <p>📝 Writeups on <a href="https://medium.com/@cyberquestor/list/metactfwalkthrough-e544acd41ee4" target="_blank">Medium</a></p>
+      <p>📝 <strong>Writeups:</strong> <a href="https://medium.com/@cyberquestor/list/metactfwalkthrough-e544acd41ee4" target="_blank">Medium</a></p>
     </div>
   </div>
 </section>
+
 
 <style>
   .ctf-icon-grid {
@@ -425,6 +430,43 @@
     font-size: 1.8rem;
     font-weight: bold;
     text-align: center;
+    .ctf-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.ctf-icon-card {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.ctf-icon-card:hover {
+  transform: scale(1.1);
+  border-color: #999;
+}
+
+.ctf-info-card {
+  background: white;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.ctf-info-card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #222;
+}
+
   }
 </style>
 
@@ -436,6 +478,18 @@
 </script>
 
 
+<script>
+  function toggleCTFInfo(id) {
+    const target = document.getElementById(id);
+    const allCards = document.querySelectorAll('.ctf-info-card');
+
+    allCards.forEach(card => {
+      if (card.id !== id) card.style.display = 'none';
+    });
+
+    target.style.display = (target.style.display === 'block') ? 'none' : 'block';
+  }
+</script>
 
 
 
