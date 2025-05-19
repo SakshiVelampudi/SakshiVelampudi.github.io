@@ -258,54 +258,55 @@
 
 
 
-<section class="section" id="ctf">
+
+<section class="section" id="ctf" style="background-color: #f9f9f9; padding: 50px 0;">
   <div class="section-content">
-    <h2>Capture The Flag (CTF) Participation</h2>
+    <h2 style="text-align:center; font-size:2rem; margin-bottom:40px;">Capture The Flag (CTF) Participation</h2>
     <div class="ctf-icon-grid">
-      <img src="assets/img/ctf_htb_logo.png" alt="HTB Logo" onclick="showCTFLabel('htb')">
-      <img src="assets/img/ctf_thm_logo.png" alt="THM Logo" onclick="showCTFLabel('thm')">
-      <img src="assets/img/ctf_meta_logo.png" alt="MetaCTF Logo" onclick="showCTFLabel('meta')">
+      <img src="assets/img/ctf_htb_logo.png" alt="HTB" onclick="showCTFLabel('htb')" class="ctf-icon">
+      <img src="assets/img/ctf_thm_logo.png" alt="THM" onclick="showCTFLabel('thm')" class="ctf-icon">
+      <img src="assets/img/ctf_meta_logo.png" alt="MetaCTF" onclick="showCTFLabel('meta')" class="ctf-icon">
     </div>
 
     <div id="htb" class="ctf-label">
       <h3>Hack The Box (HTB)</h3>
       <p><strong>Profile:</strong> <a href="https://app.hackthebox.com/profile/2135920" target="_blank">View HTB Profile</a></p>
       <ul>
-        <li><strong>Global Rank:</strong> #860</li>
-        <li><strong>User Owns:</strong> 13</li>
-        <li><strong>System Owns:</strong> 13</li>
+        <li>Global Rank: #860</li>
+        <li>User Owns: 13</li>
+        <li>System Owns: 13</li>
       </ul>
       <p><strong>Event:</strong> CyberQuestor AI vs Human</p>
       <ul>
-        <li><strong>Team:</strong> Loopback127001</li>
-        <li><strong>Rank:</strong> 91 / 404</li>
-        <li><strong>Challenges Solved:</strong> 10 / 20</li>
-        <li><strong>Skills:</strong> Privilege escalation, tunneling, Linux enumeration</li>
+        <li>Team: Loopback127001</li>
+        <li>Rank: 91 / 404</li>
+        <li>Challenges Solved: 10 / 20</li>
+        <li>Skills: Privilege escalation, tunneling, Linux enumeration</li>
       </ul>
-      <p>📝 Writeups on <a href="https://medium.com/@cyberquestor" target="_blank">Medium</a></p>
+      <p>📝 Writeups on <a href="https://medium.com/@cyberquestor/list/hacktheboxwalkthrough-290c44414be9" target="_blank">Medium</a></p>
     </div>
 
     <div id="thm" class="ctf-label">
       <h3>TryHackMe (THM)</h3>
       <p><strong>Profile:</strong> <a href="https://tryhackme.com/p/SakshiVelampudi" target="_blank">View THM Profile</a></p>
       <ul>
-        <li><strong>Rank:</strong> 123216 (Top 8%)</li>
-        <li><strong>Completed Rooms:</strong> 44</li>
-        <li><strong>Badges:</strong> 9</li>
+        <li>Rank: 123216 (Top 8%)</li>
+        <li>Completed Rooms: 44</li>
+        <li>Badges: 9</li>
       </ul>
       <p><strong>Event:</strong> Hackfinity CTF 2024</p>
       <ul>
-        <li><strong>Rank:</strong> 888</li>
-        <li><strong>Challenges Solved:</strong> 17</li>
-        <li><strong>Notable Rooms:</strong> Blue, Overpass, Advent of Cyber</li>
+        <li>Rank: 888</li>
+        <li>Challenges Solved: 17</li>
+        <li>Notable Rooms: Blue, Overpass, Advent of Cyber</li>
       </ul>
-      <p>📝 Writeups on <a href="https://medium.com/@cyberquestor" target="_blank">Medium</a></p>
+      <p>📝 Writeups on <a href="https://medium.com/@cyberquestor/list/tryhackmewalkthrough-618a05bd53fc" target="_blank">Medium</a></p>
     </div>
 
     <div id="meta" class="ctf-label">
       <h3>MetaCTF</h3>
       <p><strong>Alias:</strong> anonymous12</p>
-      <table border="1" cellpadding="5" style="margin: 10px auto;">
+      <table class="ctf-table">
         <thead>
           <tr><th>Month</th><th>Rank</th><th>Challenges Completed</th></tr>
         </thead>
@@ -316,10 +317,58 @@
           <tr><td>Dec 2024</td><td>526</td><td>1 / 10</td></tr>
         </tbody>
       </table>
-      <p>📝 Writeups on <a href="https://medium.com/@cyberquestor" target="_blank">Medium</a></p>
+      <p>📝 Writeups on <a href="https://medium.com/@cyberquestor/list/metactfwalkthrough-e544acd41ee4" target="_blank">Medium</a></p>
     </div>
   </div>
 </section>
+
+<style>
+  .ctf-icon-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 40px;
+  }
+  .ctf-icon {
+    width: 130px;
+    height: 130px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .ctf-icon:hover {
+    transform: scale(1.1);
+  }
+  .ctf-label {
+    display: none;
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.6;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  .ctf-table {
+    margin: 10px auto;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .ctf-table th, .ctf-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+</style>
+
+<script>
+  function showCTFLabel(id) {
+    document.querySelectorAll('.ctf-label').forEach(el => el.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
+
 
 <style>
   .ctf-icon-grid {
