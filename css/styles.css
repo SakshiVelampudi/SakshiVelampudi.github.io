@@ -212,3 +212,38 @@ body, html {
   height: 300px;
   margin-top: 15px;
 }
+
+.ctf-icon-card {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: 2px solid transparent;
+}
+.ctf-icon-card:hover {
+  transform: scale(1.05);
+  border-color: #ccc;
+}
+.ctf-info-card {
+  display: none;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-top: 15px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: left;
+}
+.ctf-info-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.ctf-info-card th, .ctf-info-card td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+}
