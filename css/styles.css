@@ -186,64 +186,55 @@ body, html {
 }
 
 .ctf-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
-.ctf-card {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.1);
-}
-.ctf-logo {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 10px;
-}
-.ctf-cert-img {
-  margin-top: 10px;
-  width: 100%;
-  max-width: 100%;
-}
-.ctf-cert-embed {
-  width: 100%;
-  height: 300px;
-  margin-top: 15px;
-}
-
-.ctf-icon-card {
-  width: 130px;
-  height: 130px;
-  object-fit: contain;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  border: 2px solid transparent;
-}
-.ctf-icon-card:hover {
-  transform: scale(1.05);
-  border-color: #ccc;
-}
-.ctf-info-card {
-  display: none;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  padding: 20px;
-  margin-top: 15px;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  text-align: left;
-}
-.ctf-info-card table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-.ctf-info-card th, .ctf-info-card td {
-  border: 1px solid #ccc;
-  padding: 6px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
   text-align: center;
 }
+
+.ctf-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ctf-icon {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.ctf-icon:hover {
+  transform: scale(1.1);
+  border-color: #555;
+}
+
+.ctf-info {
+  display: none;
+  margin-top: 20px;
+  background: #fff;
+  padding: 20px;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.ctf-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+.ctf-table th,
+.ctf-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
