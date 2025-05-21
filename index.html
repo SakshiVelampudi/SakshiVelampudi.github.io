@@ -410,13 +410,15 @@
       </div>
 
       <!-- Contact Form -->
-     <form action="https://formspree.io/f/xanokrzd" method="POST" class="contact-form">
-  <input type="text" name="name" placeholder="Name" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <input type="text" name="subject" placeholder="Subject">
-  <textarea name="message" placeholder="Message" required></textarea>
-  <button type="submit">Send Message</button>
-</form>
+     <form class="contact-right" action="https://formspree.io/f/xanokrzd" method="POST" class="contact-form"">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
 
 
     </div>
