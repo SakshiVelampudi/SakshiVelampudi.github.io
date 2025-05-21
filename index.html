@@ -389,36 +389,41 @@
 </section>
 
 <section class="section" id="contact" style="background-color: #f1f1f1;">
-  <div class="section-content contact-wrapper">
+  <div class="section-content contact-section">
     <h2>Contact</h2>
-    <div class="contact-container">
-      <!-- Left Column -->
-      <div class="contact-info">
-        <div class="contact-item">
+    <div class="contact-grid">
+      
+      <!-- Contact Details -->
+      <div class="contact-left">
+        <div class="contact-detail">
           <i class="fas fa-envelope"></i>
           <span>sakshi.infosec@gmail.com</span>
         </div>
-        <div class="contact-item">
+        <div class="contact-detail">
           <i class="fas fa-phone-alt"></i>
           <span>+1 (980) 428-9245</span>
         </div>
-        <div class="contact-item">
+        <div class="contact-detail">
           <i class="fas fa-map-marker-alt"></i>
-          <span>Charlotte, NC</span>
+          <span>Charlotte, North Carolina</span>
         </div>
       </div>
 
-      <!-- Right Column -->
-      <form class="contact-form">
-        <input type="text" name="name" placeholder="Name" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <input type="text" name="subject" placeholder="Subject" required />
-        <textarea name="message" rows="5" placeholder="Message" required></textarea>
+      <!-- Contact Form -->
+      <form class="contact-right" onsubmit="event.preventDefault(); alert('Message submitted successfully!');">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
         <button type="submit">Send Message</button>
       </form>
+
     </div>
   </div>
 </section>
+
 
 
 
