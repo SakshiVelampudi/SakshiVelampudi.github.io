@@ -266,6 +266,6 @@ body, html {
     background-color: #005f8a;
 }
 
-.justified-text {
+ul.justified li {
   text-align: justify;
 }
