@@ -265,3 +265,7 @@ body, html {
 .contact-right button:hover {
     background-color: #005f8a;
 }
+
+.justified-text {
+  text-align: justify;
+}
